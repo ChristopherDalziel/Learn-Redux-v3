@@ -1,5 +1,8 @@
+/*global google*/
+
 import React, { Component } from "react";
 
+// Google maps component
 export default class GoogleMaps extends Component {
   componentDidMount() {
     new google.maps.Map(this.refs.map, {

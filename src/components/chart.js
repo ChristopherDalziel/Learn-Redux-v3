@@ -6,6 +6,7 @@ import {
   SparklinesReferenceLine
 } from "react-sparklines";
 
+// Creating graph component
 function average(data) {
   return _.round(_.sum(data) / data.length);
 }
