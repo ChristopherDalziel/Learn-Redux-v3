@@ -51,10 +51,9 @@ class WeatherList extends Component {
   }
 
   render() {
-    // console.log(this.props.weather);
     return (
       <table className="table table-hover">
-        <thread>
+        <thead>
           <tr>
             <th>City</th>
             <th>Population</th>
@@ -62,13 +61,18 @@ class WeatherList extends Component {
             <th>Humidity (%)</th>
             <th>Pressure (hPa)</th>
           </tr>
-        </thread>
+        </thead>
         <tbody>{this.props.weather.map(this.renderWeather)}</tbody>
       </table>
     );
   }
 }
 
+// function mapStateToProps({ weather }) {
+//   return { weather };
+// }
+
+// the above code is similar to this...
 function mapStateToProps(state) {
   return {
     weather: state.weather
