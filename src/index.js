@@ -6,9 +6,19 @@ import { createStore, applyMiddleware } from "redux";
 
 import "./index.css";
 import App from "./components/app";
+
+import reducers from "./reducers";
+
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const createStoreWithMiddleware = applyMiddleware()(createStore);
+
+ReactDOM.render(
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
@@ -20,3 +30,4 @@ serviceWorker.unregister();
 // Lodash is a JS utility library, we will use this to to deal witht he data from the api
 // Redux-Promise is a library to deal with promises in our "action" creators
 // React-Redux is a state container for React
+// React-Sparklines is a package that allows us to create graphics
