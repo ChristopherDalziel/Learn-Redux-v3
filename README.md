@@ -1,4 +1,4 @@
-# Working Example
+# Example Screenshot
 
 ![Screen Shot](./src/screen.png)
 
