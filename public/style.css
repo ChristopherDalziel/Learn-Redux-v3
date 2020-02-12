@@ -1,5 +1,23 @@
+body {
+  background-image: url(./background-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+#searchButton {
+  background-color: black;
+  color: white;
+}
+
 td,
 th {
+  background-color: rgba(252, 252, 252, 0.5);
   vertical-align: middle !important;
   text-align: center !important;
 }
